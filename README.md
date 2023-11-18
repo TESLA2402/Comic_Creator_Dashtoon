@@ -16,6 +16,10 @@ flutter build web --release
   - Display area for generated comic panels
 </ul>
 
+## API
+- Hugging face Text-to-Image
+  - Model used : CompVis/stable-diffusion-v1-4 
+
 ## TechStack Used
 ##### <ul><li>Frontend: Flutter</li></ul>
 
