@@ -1,7 +1,5 @@
-import 'package:comic_creator_dashtoon/constants/color.dart';
 import 'package:comic_creator_dashtoon/home.dart';
 import 'package:flutter/material.dart';
-import 'package:responsive_framework/responsive_breakpoints.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 
 void main() {
@@ -22,7 +20,7 @@ class MyApp extends StatelessWidget {
         ],
       ),
       debugShowCheckedModeBanner: false,
-      title: 'Lakshay Ahlawat',
+      title: 'Comic Creator',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
