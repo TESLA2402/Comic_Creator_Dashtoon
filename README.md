@@ -1,16 +1,35 @@
 # comic_creator_dashtoon
 
-A new Flutter project.
+## How to run
+- Website url : https://tesla2402.github.io/Comic_Creator_Dashtoon/
+- Alternatively, you can build your own release by cloning the github repo, and running 
+```
+flutter build web --release
+```
+- Make sure you have Flutter SDK and Android Studio installed
 
-## Getting Started
+## Features
 
-This project is a starting point for a Flutter application.
+#### <ul>
+- Home Page
+  - Input form for 10 comic panel
+  - Display area for generated comic panels
+</ul>
 
-A few resources to get you started if this is your first Flutter project:
+## TechStack Used
+##### <ul><li>Frontend: Flutter</li></ul>
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## How to Contribute
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+1. Clone repo and create a new branch: `$ git checkout https://github.com/TESLA2402/Comic_Creator_Dashtoon -b name_for_new_branch`.
+2. Make changes and test
+3. Submit Pull Request with comprehensive description of changes
+
+
+```
+Submitted by:
+Lakshay
+200104049
+IIT Guwahati
+```
+
