@@ -14,13 +14,20 @@ class FetchImage extends StatefulWidget {
 
 class _FetchImageState extends State<FetchImage> {
   final GenerateImage _generateImage = GenerateImage();
+  Future<Uint8List>? finalData;
   @override
+  void initState() {
+    finalData =
+        _generateImage.generateImage(widget.imageText, widget.imagePaths);
+    super.initState();
+  }
+
   Widget build(BuildContext context) {
     return SizedBox(
       height: 50,
       width: 50,
       child: FutureBuilder(
-        future:
+        future: //finalData,
             _generateImage.generateImage(widget.imageText, widget.imagePaths),
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {

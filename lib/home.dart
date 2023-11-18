@@ -48,6 +48,10 @@ class _HomeScreenState extends State<HomeScreen> {
       body: SingleChildScrollView(
         child: ResponsiveBreakpoints.of(context).isMobile
             ? Column(
+                crossAxisAlignment: ResponsiveBreakpoints.of(context).isMobile
+                    ? CrossAxisAlignment.center
+                    : CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Padding(
                     padding: const EdgeInsets.only(
@@ -69,8 +73,8 @@ class _HomeScreenState extends State<HomeScreen> {
                         crossAxisAlignment:
                             ResponsiveBreakpoints.of(context).isMobile
                                 ? CrossAxisAlignment.center
-                                : CrossAxisAlignment.start,
-                        mainAxisAlignment: MainAxisAlignment.start,
+                                : CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.center,
                         mainAxisSize: MainAxisSize.min,
                         children: [
                           const Text(
@@ -219,188 +223,198 @@ class _HomeScreenState extends State<HomeScreen> {
                           const SizedBox(
                             height: 24,
                           ),
-                          Row(
-                            children: [
-                              Center(
-                                  child: Container(
-                                height: 48,
-                                width: ResponsiveBreakpoints.of(context)
-                                        .isMobile
-                                    ? MediaQuery.of(context).size.width * 0.5
-                                    : MediaQuery.of(context).size.width * 0.15,
-                                decoration: BoxDecoration(
-                                    gradient: AppColors.gradient,
-                                    borderRadius: BorderRadius.circular(12)),
-                                child: Opacity(
-                                  opacity: 1,
-                                  child: Container(
-                                    decoration: BoxDecoration(
-                                        borderRadius:
-                                            BorderRadius.circular(12)),
-                                    child: ClipRRect(
-                                      borderRadius: BorderRadius.circular(12),
-                                      child: TextButton(
-                                        onPressed: () {
-                                          panelInputs.clear();
-                                          setState(() {
-                                            _inputPanelOne.text == "";
-                                            _inputPanelTwo.text == "";
-                                            _inputPanelThree.text == "";
-                                            _inputPanelFour.text == "";
-                                            _inputPanelFive.text == "";
-                                            _inputPanelSix.text == "";
-                                            _inputPanelSeven.text == "";
-                                            _inputPanelEight.text == "";
-                                            _inputPanelNine.text == "";
-                                            _inputPanelTen.text == "";
-                                          });
-                                          panelInputs = [
-                                            "Comic Panel",
-                                            "Comic Panel",
-                                            "Comic Panel",
-                                            "Comic Panel",
-                                            "Comic Panel",
-                                            "Comic Panel",
-                                            "Comic Panel",
-                                            "Comic Panel",
-                                            "Comic Panel",
-                                            "Comic Panel",
-                                          ];
-                                        },
-                                        style: ButtonStyle(
-                                            padding: MaterialStateProperty.all<
-                                                    EdgeInsets>(
-                                                const EdgeInsets.symmetric(
-                                                    vertical: 16,
-                                                    horizontal: 20)),
-                                            fixedSize:
-                                                MaterialStateProperty.all<Size>(
-                                                    const Size.fromHeight(56))),
-                                        child: Row(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.center,
-                                          children: [
-                                            Row(children: [
-                                              Text("Clear panels",
-                                                  style: AppTypography.textMd
-                                                      .copyWith(
-                                                          color:
-                                                              AppColors.black,
-                                                          fontWeight:
-                                                              FontWeight.w500)),
-                                            ]),
-                                          ],
+                          Center(
+                            child: Row(
+                              children: [
+                                Center(
+                                    child: Container(
+                                  height: 48,
+                                  width: ResponsiveBreakpoints.of(context)
+                                          .isMobile
+                                      ? MediaQuery.of(context).size.width * 0.3
+                                      : MediaQuery.of(context).size.width *
+                                          0.15,
+                                  decoration: BoxDecoration(
+                                      gradient: AppColors.gradient,
+                                      borderRadius: BorderRadius.circular(12)),
+                                  child: Opacity(
+                                    opacity: 1,
+                                    child: Container(
+                                      decoration: BoxDecoration(
+                                          borderRadius:
+                                              BorderRadius.circular(12)),
+                                      child: ClipRRect(
+                                        borderRadius: BorderRadius.circular(12),
+                                        child: TextButton(
+                                          onPressed: () {
+                                            panelInputs.clear();
+                                            setState(() {
+                                              _inputPanelOne.text == "";
+                                              _inputPanelTwo.text == "";
+                                              _inputPanelThree.text == "";
+                                              _inputPanelFour.text == "";
+                                              _inputPanelFive.text == "";
+                                              _inputPanelSix.text == "";
+                                              _inputPanelSeven.text == "";
+                                              _inputPanelEight.text == "";
+                                              _inputPanelNine.text == "";
+                                              _inputPanelTen.text == "";
+                                            });
+                                            panelInputs = [
+                                              "Comic Panel",
+                                              "Comic Panel",
+                                              "Comic Panel",
+                                              "Comic Panel",
+                                              "Comic Panel",
+                                              "Comic Panel",
+                                              "Comic Panel",
+                                              "Comic Panel",
+                                              "Comic Panel",
+                                              "Comic Panel",
+                                            ];
+                                          },
+                                          style: ButtonStyle(
+                                              padding: MaterialStateProperty
+                                                  .all<EdgeInsets>(
+                                                      const EdgeInsets
+                                                              .symmetric(
+                                                          vertical: 16,
+                                                          horizontal: 20)),
+                                              fixedSize: MaterialStateProperty
+                                                  .all<Size>(
+                                                      const Size.fromHeight(
+                                                          56))),
+                                          child: Row(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.center,
+                                            children: [
+                                              Row(children: [
+                                                Text("Clear panels",
+                                                    style: AppTypography.textMd
+                                                        .copyWith(
+                                                            color:
+                                                                AppColors.black,
+                                                            fontWeight:
+                                                                FontWeight
+                                                                    .w500)),
+                                              ]),
+                                            ],
+                                          ),
                                         ),
                                       ),
                                     ),
                                   ),
+                                )),
+                                const SizedBox(
+                                  width: 4,
                                 ),
-                              )),
-                              const SizedBox(
-                                width: 4,
-                              ),
-                              Center(
-                                  child: Container(
-                                height: 48,
-                                width: ResponsiveBreakpoints.of(context)
-                                        .isMobile
-                                    ? MediaQuery.of(context).size.width * 0.5
-                                    : MediaQuery.of(context).size.width * 0.15,
-                                decoration: BoxDecoration(
-                                    gradient: AppColors.gradient,
-                                    borderRadius: BorderRadius.circular(12)),
-                                child: Opacity(
-                                  opacity: 1,
-                                  child: Container(
-                                    decoration: BoxDecoration(
-                                        borderRadius:
-                                            BorderRadius.circular(12)),
-                                    child: ClipRRect(
-                                      borderRadius: BorderRadius.circular(12),
-                                      child: TextButton(
-                                        onPressed: () {
-                                          panelInputs.clear();
-                                          panelInputs.add(
-                                              _inputPanelOne.text == ""
-                                                  ? "Random Image"
-                                                  : _inputPanelOne.text);
-                                          panelInputs.add(
-                                              _inputPanelTwo.text == ""
-                                                  ? "Random Image"
-                                                  : _inputPanelTwo.text);
-                                          panelInputs.add(
-                                              _inputPanelThree.text == ""
-                                                  ? "Random Image"
-                                                  : _inputPanelThree.text);
-                                          panelInputs.add(
-                                              _inputPanelFour.text == ""
-                                                  ? "Random Image"
-                                                  : _inputPanelFour.text);
-                                          panelInputs.add(
-                                              _inputPanelFive.text == ""
-                                                  ? "Random Image"
-                                                  : _inputPanelFive.text);
-                                          panelInputs.add(
-                                              _inputPanelSix.text == ""
-                                                  ? "Random Image"
-                                                  : _inputPanelSix.text);
-                                          panelInputs.add(
-                                              _inputPanelSeven.text == ""
-                                                  ? "Random Image"
-                                                  : _inputPanelSeven.text);
-                                          panelInputs.add(
-                                              _inputPanelEight.text == ""
-                                                  ? "Random Image"
-                                                  : _inputPanelEight.text);
-                                          panelInputs.add(
-                                              _inputPanelNine.text == ""
-                                                  ? "Random Image"
-                                                  : _inputPanelNine.text);
-                                          panelInputs.add(
-                                              _inputPanelTen.text == ""
-                                                  ? "Random Image"
-                                                  : _inputPanelTen.text);
-                                          setState(() {});
-                                          // Navigator.push(
-                                          //   context,
-                                          //   MaterialPageRoute(
-                                          //       builder: (context) =>
-                                          //           ComicStrip(
-                                          //             panelInputs: panelInputs,
-                                          //             imagePaths: imagePaths,
-                                          //           )),
-                                          // );
-                                        },
-                                        style: ButtonStyle(
-                                            padding: MaterialStateProperty.all<
-                                                    EdgeInsets>(
-                                                const EdgeInsets.symmetric(
-                                                    vertical: 16,
-                                                    horizontal: 20)),
-                                            fixedSize:
-                                                MaterialStateProperty.all<Size>(
-                                                    const Size.fromHeight(56))),
-                                        child: Row(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.center,
-                                          children: [
-                                            Row(children: [
-                                              Text("Generate Comic Panels",
-                                                  style: AppTypography.textMd
-                                                      .copyWith(
-                                                          color:
-                                                              AppColors.black,
-                                                          fontWeight:
-                                                              FontWeight.w500)),
-                                            ]),
-                                          ],
+                                Center(
+                                    child: Container(
+                                  height: 48,
+                                  width: ResponsiveBreakpoints.of(context)
+                                          .isMobile
+                                      ? MediaQuery.of(context).size.width * 0.3
+                                      : MediaQuery.of(context).size.width *
+                                          0.15,
+                                  decoration: BoxDecoration(
+                                      gradient: AppColors.gradient,
+                                      borderRadius: BorderRadius.circular(12)),
+                                  child: Opacity(
+                                    opacity: 1,
+                                    child: Container(
+                                      decoration: BoxDecoration(
+                                          borderRadius:
+                                              BorderRadius.circular(12)),
+                                      child: ClipRRect(
+                                        borderRadius: BorderRadius.circular(12),
+                                        child: TextButton(
+                                          onPressed: () {
+                                            panelInputs.clear();
+                                            panelInputs.add(
+                                                _inputPanelOne.text == ""
+                                                    ? "Random Image"
+                                                    : _inputPanelOne.text);
+                                            panelInputs.add(
+                                                _inputPanelTwo.text == ""
+                                                    ? "Random Image"
+                                                    : _inputPanelTwo.text);
+                                            panelInputs.add(
+                                                _inputPanelThree.text == ""
+                                                    ? "Random Image"
+                                                    : _inputPanelThree.text);
+                                            panelInputs.add(
+                                                _inputPanelFour.text == ""
+                                                    ? "Random Image"
+                                                    : _inputPanelFour.text);
+                                            panelInputs.add(
+                                                _inputPanelFive.text == ""
+                                                    ? "Random Image"
+                                                    : _inputPanelFive.text);
+                                            panelInputs.add(
+                                                _inputPanelSix.text == ""
+                                                    ? "Random Image"
+                                                    : _inputPanelSix.text);
+                                            panelInputs.add(
+                                                _inputPanelSeven.text == ""
+                                                    ? "Random Image"
+                                                    : _inputPanelSeven.text);
+                                            panelInputs.add(
+                                                _inputPanelEight.text == ""
+                                                    ? "Random Image"
+                                                    : _inputPanelEight.text);
+                                            panelInputs.add(
+                                                _inputPanelNine.text == ""
+                                                    ? "Random Image"
+                                                    : _inputPanelNine.text);
+                                            panelInputs.add(
+                                                _inputPanelTen.text == ""
+                                                    ? "Random Image"
+                                                    : _inputPanelTen.text);
+                                            setState(() {});
+                                            // Navigator.push(
+                                            //   context,
+                                            //   MaterialPageRoute(
+                                            //       builder: (context) =>
+                                            //           ComicStrip(
+                                            //             panelInputs: panelInputs,
+                                            //             imagePaths: imagePaths,
+                                            //           )),
+                                            // );
+                                          },
+                                          style: ButtonStyle(
+                                              padding: MaterialStateProperty
+                                                  .all<EdgeInsets>(
+                                                      const EdgeInsets
+                                                              .symmetric(
+                                                          vertical: 16,
+                                                          horizontal: 20)),
+                                              fixedSize: MaterialStateProperty
+                                                  .all<Size>(
+                                                      const Size.fromHeight(
+                                                          56))),
+                                          child: Row(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.center,
+                                            children: [
+                                              Row(children: [
+                                                Text("Generate Comic Panels",
+                                                    style: AppTypography.textMd
+                                                        .copyWith(
+                                                            color:
+                                                                AppColors.black,
+                                                            fontWeight:
+                                                                FontWeight
+                                                                    .w500)),
+                                              ]),
+                                            ],
+                                          ),
                                         ),
                                       ),
                                     ),
                                   ),
-                                ),
-                              )),
-                            ],
+                                )),
+                              ],
+                            ),
                           )
                         ],
                       ),

@@ -27,8 +27,7 @@ class GenerateImage {
       headers: headers,
       body: jsonEncode(data),
     );
-    final tempDir = await getTemporaryDirectory();
-    imagePaths.add('${tempDir.path}/image.png');
+    //await Future.delayed(const Duration(seconds: 20), () {});
     if (response.statusCode == 200) {
       return response.bodyBytes;
     } else {
