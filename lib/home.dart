@@ -61,13 +61,6 @@ class _HomeScreenState extends State<HomeScreen> {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(8),
                         color: Colors.black.withOpacity(0.8),
-                        boxShadow: const [
-                          BoxShadow(
-                              color: Colors.white,
-                              spreadRadius: 0,
-                              blurRadius: 5,
-                              blurStyle: BlurStyle.solid)
-                        ],
                       ),
                       child: Column(
                         crossAxisAlignment:
@@ -429,13 +422,6 @@ class _HomeScreenState extends State<HomeScreen> {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(8),
                         color: Colors.black.withOpacity(0.8),
-                        boxShadow: const [
-                          BoxShadow(
-                              color: Colors.white,
-                              spreadRadius: 0,
-                              blurRadius: 5,
-                              blurStyle: BlurStyle.solid)
-                        ],
                       ),
                       child: Column(
                         crossAxisAlignment:
