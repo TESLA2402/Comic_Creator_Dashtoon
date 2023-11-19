@@ -1415,31 +1415,33 @@ class _HomeScreenState extends State<HomeScreen> {
                                                 "comic panel with${panelInputs[index]}",
                                             imagePaths: imagePaths,
                                           ),
+                                          Text(
+                                            "yes",
+                                            style: GoogleFonts.bangers(
+                                                color: Colors.white),
+                                          )
                                           // if (bubbleText[index].toString() !=
                                           //     "")
-                                          Container(
-                                              width: double.infinity,
-                                              color: Colors.white,
-                                              padding: EdgeInsets.all(4),
-                                              child: Expanded(
-                                                child: Container(
-                                                  decoration: BoxDecoration(
-                                                      border: Border.all(
-                                                          color: Colors.black),
-                                                      color: Colors.white),
-                                                  child: Padding(
-                                                    padding:
-                                                        EdgeInsets.all(4.0),
-                                                    child: Text(
-                                                      // bubbleText[index]
-                                                      //     .toString(),
-                                                      "yes",
-                                                      // style:
-                                                      //     GoogleFonts.bangers(),
-                                                    ),
-                                                  ),
-                                                ),
-                                              )),
+                                          // Container(
+                                          //     width: double.infinity,
+                                          //     color: Colors.white,
+                                          //     padding: EdgeInsets.all(4),
+                                          //     child: Container(
+                                          //       decoration: BoxDecoration(
+                                          //           border: Border.all(
+                                          //               color: Colors.black),
+                                          //           color: Colors.white),
+                                          //       child: Padding(
+                                          //         padding: EdgeInsets.all(4.0),
+                                          //         child: Text(
+                                          //           // bubbleText[index]
+                                          //           //     .toString(),
+                                          //           "yes",
+                                          //           // style:
+                                          //           //     GoogleFonts.bangers(),
+                                          //         ),
+                                          //       ),
+                                          //     )),
                                         ]);
                                   },
                                 ),
