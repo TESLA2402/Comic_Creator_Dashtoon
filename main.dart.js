@@ -44999,10 +44999,8 @@ return A.O(null,r)}})
 return A.P($async$$0,r)},
 $S:22}
 A.agX.prototype={
-$2(a,b){var s,r=null,q=this.a,p=A.a([new A.qD("comic panel with"+q.ay[b],q.ch,r)],t.E)
-q=q.CW[b]
-if(q!==""){s=A.ao3(B.n)
-p.push(A.bE(r,A.at4(A.bE(r,new A.cI(new A.aE(4,4,4,4),A.kP(q,r,r,r,A.aqO().$0(),r,r),r),B.m,r,r,new A.bd(B.i,r,s,r,r,r,B.A),r,r,r,r)),B.m,B.i,r,r,r,r,new A.aE(4,4,4,4),1/0))}return A.p5(B.hH,p,B.ao,B.ct)},
+$2(a,b){var s=null,r=this.a,q=r.ay[b],p=A.ao3(B.n)
+return A.p5(B.hH,A.a([new A.qD("comic panel with"+q,r.ch,s),A.bE(s,A.at4(A.bE(s,new A.cI(new A.aE(4,4,4,4),A.kP(r.CW[b],s,s,s,A.aqO().$0(),s,s),s),B.m,s,s,new A.bd(B.i,s,p,s,s,s,B.A),s,s,s,s)),B.m,B.i,s,s,s,s,new A.aE(4,4,4,4),1/0)],t.E),B.ao,B.ct)},
 $S:137}
 A.agy.prototype={
 $1(a){var s=null,r=this.a
@@ -45014,7 +45012,8 @@ s.ag(new A.agw(s,this.b))
 A.y_(this.c,!1).e3()},
 $S:0}
 A.agw.prototype={
-$0(){this.a.CW[this.b]="Random Text"},
+$0(){var s=this.a
+s.CW[this.b]=s.ax.a.a},
 $S:0}
 A.Jj.prototype={
 L(a){var s=null,r=$.arF(),q=A.Aw(s,A.aCC(B.an,B.IR),B.n,!0)
