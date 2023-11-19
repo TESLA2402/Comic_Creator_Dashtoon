@@ -139,12 +139,14 @@ class _HomeScreenState extends State<HomeScreen> {
                                       borderRadius: BorderRadius.circular(20)),
                                   child: const Row(
                                     children: [
-                                      Text(
-                                        "Generate Comic",
-                                        style: TextStyle(
-                                            color: Colors.blue,
-                                            fontWeight: FontWeight.w800,
-                                            fontSize: 24),
+                                      SelectionContainer.disabled(
+                                        child: Text(
+                                          "Generate Comic",
+                                          style: TextStyle(
+                                              color: Colors.blue,
+                                              fontWeight: FontWeight.w800,
+                                              fontSize: 24),
+                                        ),
                                       ),
                                       SizedBox(
                                         width: 4,
@@ -199,16 +201,22 @@ class _HomeScreenState extends State<HomeScreen> {
                                                     .withOpacity(0.2),
                                                 borderRadius:
                                                     BorderRadius.circular(10)),
-                                            child: const Text(
-                                              "Add Text",
-                                              style: TextStyle(
-                                                  color: Colors.blue,
-                                                  fontWeight: FontWeight.w800,
-                                                  fontSize: 12),
+                                            child: const SelectionContainer
+                                                .disabled(
+                                              child: Text(
+                                                "Add Text",
+                                                style: TextStyle(
+                                                    color: Colors.blue,
+                                                    fontWeight: FontWeight.w800,
+                                                    fontSize: 12),
+                                              ),
                                             ),
                                           ),
                                         ),
                                       ],
+                                    ),
+                                    const SizedBox(
+                                      height: 4,
                                     ),
                                     InputField(
                                         editingController: _inputPanelOne),
@@ -242,16 +250,22 @@ class _HomeScreenState extends State<HomeScreen> {
                                                     .withOpacity(0.2),
                                                 borderRadius:
                                                     BorderRadius.circular(10)),
-                                            child: const Text(
-                                              "Add Text",
-                                              style: TextStyle(
-                                                  color: Colors.blue,
-                                                  fontWeight: FontWeight.w800,
-                                                  fontSize: 12),
+                                            child: const SelectionContainer
+                                                .disabled(
+                                              child: Text(
+                                                "Add Text",
+                                                style: TextStyle(
+                                                    color: Colors.blue,
+                                                    fontWeight: FontWeight.w800,
+                                                    fontSize: 12),
+                                              ),
                                             ),
                                           ),
                                         ),
                                       ],
+                                    ),
+                                    const SizedBox(
+                                      height: 4,
                                     ),
                                     InputField(
                                         editingController: _inputPanelTwo),
@@ -285,16 +299,22 @@ class _HomeScreenState extends State<HomeScreen> {
                                                     .withOpacity(0.2),
                                                 borderRadius:
                                                     BorderRadius.circular(10)),
-                                            child: const Text(
-                                              "Add Text",
-                                              style: TextStyle(
-                                                  color: Colors.blue,
-                                                  fontWeight: FontWeight.w800,
-                                                  fontSize: 12),
+                                            child: const SelectionContainer
+                                                .disabled(
+                                              child: Text(
+                                                "Add Text",
+                                                style: TextStyle(
+                                                    color: Colors.blue,
+                                                    fontWeight: FontWeight.w800,
+                                                    fontSize: 12),
+                                              ),
                                             ),
                                           ),
                                         ),
                                       ],
+                                    ),
+                                    const SizedBox(
+                                      height: 4,
                                     ),
                                     InputField(
                                         editingController: _inputPanelThree),
@@ -328,16 +348,22 @@ class _HomeScreenState extends State<HomeScreen> {
                                                     .withOpacity(0.2),
                                                 borderRadius:
                                                     BorderRadius.circular(10)),
-                                            child: const Text(
-                                              "Add Text",
-                                              style: TextStyle(
-                                                  color: Colors.blue,
-                                                  fontWeight: FontWeight.w800,
-                                                  fontSize: 12),
+                                            child: const SelectionContainer
+                                                .disabled(
+                                              child: Text(
+                                                "Add Text",
+                                                style: TextStyle(
+                                                    color: Colors.blue,
+                                                    fontWeight: FontWeight.w800,
+                                                    fontSize: 12),
+                                              ),
                                             ),
                                           ),
                                         ),
                                       ],
+                                    ),
+                                    const SizedBox(
+                                      height: 4,
                                     ),
                                     InputField(
                                         editingController: _inputPanelFour),
@@ -371,16 +397,22 @@ class _HomeScreenState extends State<HomeScreen> {
                                                     .withOpacity(0.2),
                                                 borderRadius:
                                                     BorderRadius.circular(10)),
-                                            child: const Text(
-                                              "Add Text",
-                                              style: TextStyle(
-                                                  color: Colors.blue,
-                                                  fontWeight: FontWeight.w800,
-                                                  fontSize: 12),
+                                            child: const SelectionContainer
+                                                .disabled(
+                                              child: Text(
+                                                "Add Text",
+                                                style: TextStyle(
+                                                    color: Colors.blue,
+                                                    fontWeight: FontWeight.w800,
+                                                    fontSize: 12),
+                                              ),
                                             ),
                                           ),
                                         ),
                                       ],
+                                    ),
+                                    const SizedBox(
+                                      height: 4,
                                     ),
                                     InputField(
                                         editingController: _inputPanelFive),
@@ -414,16 +446,22 @@ class _HomeScreenState extends State<HomeScreen> {
                                                     .withOpacity(0.2),
                                                 borderRadius:
                                                     BorderRadius.circular(10)),
-                                            child: const Text(
-                                              "Add Text",
-                                              style: TextStyle(
-                                                  color: Colors.blue,
-                                                  fontWeight: FontWeight.w800,
-                                                  fontSize: 12),
+                                            child: const SelectionContainer
+                                                .disabled(
+                                              child: Text(
+                                                "Add Text",
+                                                style: TextStyle(
+                                                    color: Colors.blue,
+                                                    fontWeight: FontWeight.w800,
+                                                    fontSize: 12),
+                                              ),
                                             ),
                                           ),
                                         ),
                                       ],
+                                    ),
+                                    const SizedBox(
+                                      height: 4,
                                     ),
                                     InputField(
                                         editingController: _inputPanelSix),
@@ -457,16 +495,22 @@ class _HomeScreenState extends State<HomeScreen> {
                                                     .withOpacity(0.2),
                                                 borderRadius:
                                                     BorderRadius.circular(10)),
-                                            child: const Text(
-                                              "Add Text",
-                                              style: TextStyle(
-                                                  color: Colors.blue,
-                                                  fontWeight: FontWeight.w800,
-                                                  fontSize: 12),
+                                            child: const SelectionContainer
+                                                .disabled(
+                                              child: Text(
+                                                "Add Text",
+                                                style: TextStyle(
+                                                    color: Colors.blue,
+                                                    fontWeight: FontWeight.w800,
+                                                    fontSize: 12),
+                                              ),
                                             ),
                                           ),
                                         ),
                                       ],
+                                    ),
+                                    const SizedBox(
+                                      height: 4,
                                     ),
                                     InputField(
                                         editingController: _inputPanelSeven),
@@ -500,16 +544,22 @@ class _HomeScreenState extends State<HomeScreen> {
                                                     .withOpacity(0.2),
                                                 borderRadius:
                                                     BorderRadius.circular(10)),
-                                            child: const Text(
-                                              "Add Text",
-                                              style: TextStyle(
-                                                  color: Colors.blue,
-                                                  fontWeight: FontWeight.w800,
-                                                  fontSize: 12),
+                                            child: const SelectionContainer
+                                                .disabled(
+                                              child: Text(
+                                                "Add Text",
+                                                style: TextStyle(
+                                                    color: Colors.blue,
+                                                    fontWeight: FontWeight.w800,
+                                                    fontSize: 12),
+                                              ),
                                             ),
                                           ),
                                         ),
                                       ],
+                                    ),
+                                    const SizedBox(
+                                      height: 4,
                                     ),
                                     InputField(
                                         editingController: _inputPanelEight),
@@ -543,16 +593,22 @@ class _HomeScreenState extends State<HomeScreen> {
                                                     .withOpacity(0.2),
                                                 borderRadius:
                                                     BorderRadius.circular(10)),
-                                            child: const Text(
-                                              "Add Text",
-                                              style: TextStyle(
-                                                  color: Colors.blue,
-                                                  fontWeight: FontWeight.w800,
-                                                  fontSize: 12),
+                                            child: const SelectionContainer
+                                                .disabled(
+                                              child: Text(
+                                                "Add Text",
+                                                style: TextStyle(
+                                                    color: Colors.blue,
+                                                    fontWeight: FontWeight.w800,
+                                                    fontSize: 12),
+                                              ),
                                             ),
                                           ),
                                         ),
                                       ],
+                                    ),
+                                    const SizedBox(
+                                      height: 4,
                                     ),
                                     InputField(
                                         editingController: _inputPanelNine),
@@ -586,16 +642,22 @@ class _HomeScreenState extends State<HomeScreen> {
                                                     .withOpacity(0.2),
                                                 borderRadius:
                                                     BorderRadius.circular(10)),
-                                            child: const Text(
-                                              "Add Text",
-                                              style: TextStyle(
-                                                  color: Colors.blue,
-                                                  fontWeight: FontWeight.w800,
-                                                  fontSize: 12),
+                                            child: const SelectionContainer
+                                                .disabled(
+                                              child: Text(
+                                                "Add Text",
+                                                style: TextStyle(
+                                                    color: Colors.blue,
+                                                    fontWeight: FontWeight.w800,
+                                                    fontSize: 12),
+                                              ),
                                             ),
                                           ),
                                         ),
                                       ],
+                                    ),
+                                    const SizedBox(
+                                      height: 4,
                                     ),
                                     InputField(
                                         editingController: _inputPanelTen),
@@ -644,12 +706,14 @@ class _HomeScreenState extends State<HomeScreen> {
                                       borderRadius: BorderRadius.circular(20)),
                                   child: const Row(
                                     children: [
-                                      Text(
-                                        "Output",
-                                        style: TextStyle(
-                                            color: Colors.blue,
-                                            fontWeight: FontWeight.w800,
-                                            fontSize: 24),
+                                      SelectionContainer.disabled(
+                                        child: Text(
+                                          "Output",
+                                          style: TextStyle(
+                                              color: Colors.blue,
+                                              fontWeight: FontWeight.w800,
+                                              fontSize: 24),
+                                        ),
                                       ),
                                       SizedBox(
                                         width: 4,
@@ -693,29 +757,13 @@ class _HomeScreenState extends State<HomeScreen> {
                                               "comic panel with${panelInputs[index]}",
                                           imagePaths: imagePaths,
                                         ),
-                                        if (bubbleText[index] != "")
-                                          Container(
-                                              width: double.infinity,
-                                              color: Colors.white,
-                                              padding: EdgeInsets.all(4),
-                                              child: Expanded(
-                                                child: Container(
-                                                  decoration: BoxDecoration(
-                                                      border: Border.all(
-                                                          color: Colors.black),
-                                                      color: Colors.white),
-                                                  child: Padding(
-                                                    padding:
-                                                        EdgeInsets.all(4.0),
-                                                    child: Text(
-                                                      bubbleText[index]
-                                                          .toString(),
-                                                      style:
-                                                          GoogleFonts.bangers(),
-                                                    ),
-                                                  ),
-                                                ),
-                                              )),
+                                        if (bubbleText[index].toString() != "")
+                                          Text(
+                                            bubbleText[index],
+                                            style: GoogleFonts.bangers(
+                                                color: Colors.white,
+                                                decorationColor: Colors.yellow),
+                                          )
                                       ]);
                                 },
                               ),
@@ -724,7 +772,6 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     ),
                   ),
-                  //ComicStrip()
                 ],
               ),
             )
@@ -803,12 +850,14 @@ class _HomeScreenState extends State<HomeScreen> {
                                     borderRadius: BorderRadius.circular(20)),
                                 child: Row(
                                   children: [
-                                    const Text(
-                                      "Generate Comic",
-                                      style: TextStyle(
-                                          color: Colors.blue,
-                                          fontWeight: FontWeight.w800,
-                                          fontSize: 24),
+                                    const SelectionContainer.disabled(
+                                      child: Text(
+                                        "Generate Comic",
+                                        style: TextStyle(
+                                            color: Colors.blue,
+                                            fontWeight: FontWeight.w800,
+                                            fontSize: 24),
+                                      ),
                                     ),
                                     const SizedBox(
                                       width: 4,
@@ -877,16 +926,23 @@ class _HomeScreenState extends State<HomeScreen> {
                                                   borderRadius:
                                                       BorderRadius.circular(
                                                           10)),
-                                              child: const Text(
-                                                "Add Text",
-                                                style: TextStyle(
-                                                    color: Colors.blue,
-                                                    fontWeight: FontWeight.w800,
-                                                    fontSize: 12),
+                                              child: const SelectionContainer
+                                                  .disabled(
+                                                child: Text(
+                                                  "Add Text",
+                                                  style: TextStyle(
+                                                      color: Colors.blue,
+                                                      fontWeight:
+                                                          FontWeight.w800,
+                                                      fontSize: 12),
+                                                ),
                                               ),
                                             ),
                                           ),
                                         ],
+                                      ),
+                                      const SizedBox(
+                                        height: 4,
                                       ),
                                       InputField(
                                           editingController: _inputPanelOne),
@@ -921,16 +977,23 @@ class _HomeScreenState extends State<HomeScreen> {
                                                   borderRadius:
                                                       BorderRadius.circular(
                                                           10)),
-                                              child: const Text(
-                                                "Add Text",
-                                                style: TextStyle(
-                                                    color: Colors.blue,
-                                                    fontWeight: FontWeight.w800,
-                                                    fontSize: 12),
+                                              child: const SelectionContainer
+                                                  .disabled(
+                                                child: Text(
+                                                  "Add Text",
+                                                  style: TextStyle(
+                                                      color: Colors.blue,
+                                                      fontWeight:
+                                                          FontWeight.w800,
+                                                      fontSize: 12),
+                                                ),
                                               ),
                                             ),
                                           ),
                                         ],
+                                      ),
+                                      const SizedBox(
+                                        height: 4,
                                       ),
                                       InputField(
                                           editingController: _inputPanelTwo),
@@ -965,16 +1028,23 @@ class _HomeScreenState extends State<HomeScreen> {
                                                   borderRadius:
                                                       BorderRadius.circular(
                                                           10)),
-                                              child: const Text(
-                                                "Add Text",
-                                                style: TextStyle(
-                                                    color: Colors.blue,
-                                                    fontWeight: FontWeight.w800,
-                                                    fontSize: 12),
+                                              child: const SelectionContainer
+                                                  .disabled(
+                                                child: Text(
+                                                  "Add Text",
+                                                  style: TextStyle(
+                                                      color: Colors.blue,
+                                                      fontWeight:
+                                                          FontWeight.w800,
+                                                      fontSize: 12),
+                                                ),
                                               ),
                                             ),
                                           ),
                                         ],
+                                      ),
+                                      const SizedBox(
+                                        height: 4,
                                       ),
                                       InputField(
                                           editingController: _inputPanelThree),
@@ -1009,16 +1079,23 @@ class _HomeScreenState extends State<HomeScreen> {
                                                   borderRadius:
                                                       BorderRadius.circular(
                                                           10)),
-                                              child: const Text(
-                                                "Add Text",
-                                                style: TextStyle(
-                                                    color: Colors.blue,
-                                                    fontWeight: FontWeight.w800,
-                                                    fontSize: 12),
+                                              child: const SelectionContainer
+                                                  .disabled(
+                                                child: Text(
+                                                  "Add Text",
+                                                  style: TextStyle(
+                                                      color: Colors.blue,
+                                                      fontWeight:
+                                                          FontWeight.w800,
+                                                      fontSize: 12),
+                                                ),
                                               ),
                                             ),
                                           ),
                                         ],
+                                      ),
+                                      const SizedBox(
+                                        height: 4,
                                       ),
                                       InputField(
                                           editingController: _inputPanelFour),
@@ -1053,16 +1130,23 @@ class _HomeScreenState extends State<HomeScreen> {
                                                   borderRadius:
                                                       BorderRadius.circular(
                                                           10)),
-                                              child: const Text(
-                                                "Add Text",
-                                                style: TextStyle(
-                                                    color: Colors.blue,
-                                                    fontWeight: FontWeight.w800,
-                                                    fontSize: 12),
+                                              child: const SelectionContainer
+                                                  .disabled(
+                                                child: Text(
+                                                  "Add Text",
+                                                  style: TextStyle(
+                                                      color: Colors.blue,
+                                                      fontWeight:
+                                                          FontWeight.w800,
+                                                      fontSize: 12),
+                                                ),
                                               ),
                                             ),
                                           ),
                                         ],
+                                      ),
+                                      const SizedBox(
+                                        height: 4,
                                       ),
                                       InputField(
                                           editingController: _inputPanelFive),
@@ -1097,16 +1181,23 @@ class _HomeScreenState extends State<HomeScreen> {
                                                   borderRadius:
                                                       BorderRadius.circular(
                                                           10)),
-                                              child: const Text(
-                                                "Add Text",
-                                                style: TextStyle(
-                                                    color: Colors.blue,
-                                                    fontWeight: FontWeight.w800,
-                                                    fontSize: 12),
+                                              child: const SelectionContainer
+                                                  .disabled(
+                                                child: Text(
+                                                  "Add Text",
+                                                  style: TextStyle(
+                                                      color: Colors.blue,
+                                                      fontWeight:
+                                                          FontWeight.w800,
+                                                      fontSize: 12),
+                                                ),
                                               ),
                                             ),
                                           ),
                                         ],
+                                      ),
+                                      const SizedBox(
+                                        height: 4,
                                       ),
                                       InputField(
                                           editingController: _inputPanelSix),
@@ -1141,16 +1232,23 @@ class _HomeScreenState extends State<HomeScreen> {
                                                   borderRadius:
                                                       BorderRadius.circular(
                                                           10)),
-                                              child: const Text(
-                                                "Add Text",
-                                                style: TextStyle(
-                                                    color: Colors.blue,
-                                                    fontWeight: FontWeight.w800,
-                                                    fontSize: 12),
+                                              child: const SelectionContainer
+                                                  .disabled(
+                                                child: Text(
+                                                  "Add Text",
+                                                  style: TextStyle(
+                                                      color: Colors.blue,
+                                                      fontWeight:
+                                                          FontWeight.w800,
+                                                      fontSize: 12),
+                                                ),
                                               ),
                                             ),
                                           ),
                                         ],
+                                      ),
+                                      const SizedBox(
+                                        height: 4,
                                       ),
                                       InputField(
                                           editingController: _inputPanelSeven),
@@ -1185,16 +1283,23 @@ class _HomeScreenState extends State<HomeScreen> {
                                                   borderRadius:
                                                       BorderRadius.circular(
                                                           10)),
-                                              child: const Text(
-                                                "Add Text",
-                                                style: TextStyle(
-                                                    color: Colors.blue,
-                                                    fontWeight: FontWeight.w800,
-                                                    fontSize: 12),
+                                              child: const SelectionContainer
+                                                  .disabled(
+                                                child: Text(
+                                                  "Add Text",
+                                                  style: TextStyle(
+                                                      color: Colors.blue,
+                                                      fontWeight:
+                                                          FontWeight.w800,
+                                                      fontSize: 12),
+                                                ),
                                               ),
                                             ),
                                           ),
                                         ],
+                                      ),
+                                      const SizedBox(
+                                        height: 4,
                                       ),
                                       InputField(
                                           editingController: _inputPanelEight),
@@ -1229,16 +1334,23 @@ class _HomeScreenState extends State<HomeScreen> {
                                                   borderRadius:
                                                       BorderRadius.circular(
                                                           10)),
-                                              child: const Text(
-                                                "Add Text",
-                                                style: TextStyle(
-                                                    color: Colors.blue,
-                                                    fontWeight: FontWeight.w800,
-                                                    fontSize: 12),
+                                              child: const SelectionContainer
+                                                  .disabled(
+                                                child: Text(
+                                                  "Add Text",
+                                                  style: TextStyle(
+                                                      color: Colors.blue,
+                                                      fontWeight:
+                                                          FontWeight.w800,
+                                                      fontSize: 12),
+                                                ),
                                               ),
                                             ),
                                           ),
                                         ],
+                                      ),
+                                      const SizedBox(
+                                        height: 4,
                                       ),
                                       InputField(
                                           editingController: _inputPanelNine),
@@ -1273,16 +1385,23 @@ class _HomeScreenState extends State<HomeScreen> {
                                                   borderRadius:
                                                       BorderRadius.circular(
                                                           10)),
-                                              child: const Text(
-                                                "Add Text",
-                                                style: TextStyle(
-                                                    color: Colors.blue,
-                                                    fontWeight: FontWeight.w800,
-                                                    fontSize: 12),
+                                              child: const SelectionContainer
+                                                  .disabled(
+                                                child: Text(
+                                                  "Add Text",
+                                                  style: TextStyle(
+                                                      color: Colors.blue,
+                                                      fontWeight:
+                                                          FontWeight.w800,
+                                                      fontSize: 12),
+                                                ),
                                               ),
                                             ),
                                           ),
                                         ],
+                                      ),
+                                      const SizedBox(
+                                        height: 4,
                                       ),
                                       InputField(
                                           editingController: _inputPanelTen),
@@ -1329,25 +1448,6 @@ class _HomeScreenState extends State<HomeScreen> {
                               children: [
                                 GestureDetector(
                                   onTap: () async {
-                                    // final box = context.findRenderObject()
-                                    //     as RenderBox?;
-                                    // final scaffoldMessenger =
-                                    //     ScaffoldMessenger.of(context);
-                                    // ShareResult shareResult;
-                                    // print(imagePaths);
-                                    // final files = <XFile>[];
-                                    // for (var i = 0;
-                                    //     i < imagePaths.length;
-                                    //     i++) {
-                                    //   files.add(XFile(imagePaths[i],
-                                    //       name: 'imageNames[i]'));
-                                    // }
-                                    // shareResult = await Share.shareXFiles(files,
-                                    //     text: "text",
-                                    //     subject: "subject",
-                                    //     sharePositionOrigin:
-                                    //         box!.localToGlobal(Offset.zero) &
-                                    //             box.size);
                                     Share.shareXFiles([
                                       XFile('assets/random_comic_panel.jpg')
                                     ], text: 'Great picture');
@@ -1362,12 +1462,14 @@ class _HomeScreenState extends State<HomeScreen> {
                                             BorderRadius.circular(20)),
                                     child: const Row(
                                       children: [
-                                        Text(
-                                          "Output",
-                                          style: TextStyle(
-                                              color: Colors.blue,
-                                              fontWeight: FontWeight.w800,
-                                              fontSize: 24),
+                                        SelectionContainer.disabled(
+                                          child: Text(
+                                            "Output",
+                                            style: TextStyle(
+                                                color: Colors.blue,
+                                                fontWeight: FontWeight.w800,
+                                                fontSize: 24),
+                                          ),
                                         ),
                                         SizedBox(
                                           width: 4,
@@ -1484,12 +1586,14 @@ class _HomeScreenState extends State<HomeScreen> {
                 decoration: BoxDecoration(
                     color: Colors.lightBlue.withOpacity(0.2),
                     borderRadius: BorderRadius.circular(10)),
-                child: const Text(
-                  "Ok",
-                  style: TextStyle(
-                      color: Colors.blue,
-                      fontWeight: FontWeight.w800,
-                      fontSize: 12),
+                child: const SelectionContainer.disabled(
+                  child: Text(
+                    "Ok",
+                    style: TextStyle(
+                        color: Colors.blue,
+                        fontWeight: FontWeight.w800,
+                        fontSize: 12),
+                  ),
                 ),
               ),
             ),
