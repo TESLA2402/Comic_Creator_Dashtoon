@@ -12,8 +12,10 @@
 
 #### <ul>
 - Home Page
-  - Input form for 10 comic panel
+  - Input form for 10 comic panels
   - Display area for generated comic panels
+  - Share generated comic strip (currently only available on windows)
+  - Ability to add speech bubbles or text annotations on the images.
 </ul>
 
 ## API
