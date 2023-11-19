@@ -45000,7 +45000,7 @@ return A.P($async$$0,r)},
 $S:22}
 A.agX.prototype={
 $2(a,b){var s=null,r=this.a,q=r.ay[b],p=A.ao3(B.n)
-return A.p5(B.hH,A.a([new A.qD("comic panel with"+q,r.ch,s),A.bE(s,A.at4(A.bE(s,new A.cI(new A.aE(4,4,4,4),A.kP(r.CW[b],s,s,s,A.aqO().$0(),s,s),s),B.m,s,s,new A.bd(B.i,s,p,s,s,s,B.A),s,s,s,s)),B.m,B.i,s,s,s,s,new A.aE(4,4,4,4),1/0)],t.E),B.ao,B.ct)},
+return A.p5(B.hH,A.a([new A.qD("comic panel with"+q,r.ch,s),A.bE(s,A.at4(A.bE(s,new A.cI(new A.aE(4,4,4,4),A.kP("yes",s,s,s,A.aqO().$0(),s,s),s),B.m,s,s,new A.bd(B.i,s,p,s,s,s,B.A),s,s,s,s)),B.m,B.i,s,s,s,s,new A.aE(4,4,4,4),1/0)],t.E),B.ao,B.ct)},
 $S:137}
 A.agy.prototype={
 $1(a){var s=null,r=this.a
