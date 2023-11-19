@@ -696,30 +696,28 @@ class _HomeScreenState extends State<HomeScreen> {
                                           imagePaths: imagePaths,
                                         ),
                                         if (bubbleText[index] != "")
-                                          Expanded(
-                                            child: Container(
-                                                width: double.infinity,
-                                                color: Colors.white,
-                                                padding: EdgeInsets.all(4),
-                                                child: Expanded(
-                                                  child: Container(
-                                                    decoration: BoxDecoration(
-                                                        border: Border.all(
-                                                            color:
-                                                                Colors.black),
-                                                        color: Colors.white),
-                                                    child: Padding(
-                                                      padding:
-                                                          EdgeInsets.all(4.0),
-                                                      child: Text(
-                                                        bubbleText[index],
-                                                        style: GoogleFonts
-                                                            .bangers(),
-                                                      ),
+                                          Container(
+                                              width: double.infinity,
+                                              color: Colors.white,
+                                              padding: EdgeInsets.all(4),
+                                              child: Expanded(
+                                                child: Container(
+                                                  decoration: BoxDecoration(
+                                                      border: Border.all(
+                                                          color: Colors.black),
+                                                      color: Colors.white),
+                                                  child: Padding(
+                                                    padding:
+                                                        EdgeInsets.all(4.0),
+                                                    child: Text(
+                                                      bubbleText[index]
+                                                          .toString(),
+                                                      style:
+                                                          GoogleFonts.bangers(),
                                                     ),
                                                   ),
-                                                )),
-                                          ),
+                                                ),
+                                              )),
                                       ]);
                                 },
                               ),
@@ -1421,31 +1419,29 @@ class _HomeScreenState extends State<HomeScreen> {
                                           ),
                                           if (bubbleText[index].toString() !=
                                               "")
-                                            Expanded(
-                                              child: Container(
-                                                  width: double.infinity,
-                                                  color: Colors.white,
-                                                  padding: EdgeInsets.all(4),
-                                                  child: Expanded(
-                                                    child: Container(
-                                                      decoration: BoxDecoration(
-                                                          border: Border.all(
-                                                              color:
-                                                                  Colors.black),
-                                                          color: Colors.white),
-                                                      child: Padding(
-                                                        padding:
-                                                            EdgeInsets.all(4.0),
-                                                        child: Text(
-                                                          bubbleText[index]
-                                                              .toString(),
-                                                          style: GoogleFonts
-                                                              .bangers(),
-                                                        ),
+                                            Container(
+                                                width: double.infinity,
+                                                color: Colors.white,
+                                                padding: EdgeInsets.all(4),
+                                                child: Expanded(
+                                                  child: Container(
+                                                    decoration: BoxDecoration(
+                                                        border: Border.all(
+                                                            color:
+                                                                Colors.black),
+                                                        color: Colors.white),
+                                                    child: Padding(
+                                                      padding:
+                                                          EdgeInsets.all(4.0),
+                                                      child: Text(
+                                                        bubbleText[index]
+                                                            .toString(),
+                                                        style: GoogleFonts
+                                                            .bangers(),
                                                       ),
                                                     ),
-                                                  )),
-                                            ),
+                                                  ),
+                                                )),
                                         ]);
                                   },
                                 ),
@@ -1475,7 +1471,9 @@ class _HomeScreenState extends State<HomeScreen> {
           actions: [
             GestureDetector(
               onTap: () {
-                bubbleText[index] = _inputPanelText.text;
+                setState(() {
+                  bubbleText[index] = _inputPanelText.text.toString();
+                });
                 Navigator.of(context).pop();
               },
               child: Container(
