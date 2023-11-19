@@ -1,7 +1,6 @@
 import 'dart:convert';
 import 'dart:typed_data';
 import 'package:http/http.dart' as http;
-import 'package:path_provider/path_provider.dart';
 
 class GenerateImage {
   Future<Uint8List> generateImage(
@@ -28,6 +27,7 @@ class GenerateImage {
       body: jsonEncode(data),
     );
     await Future.delayed(const Duration(seconds: 30), () {});
+
     if (response.statusCode == 200) {
       return response.bodyBytes;
     } else {

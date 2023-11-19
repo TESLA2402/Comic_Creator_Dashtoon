@@ -12,17 +12,22 @@ class FetchImage extends StatefulWidget {
   State<FetchImage> createState() => _FetchImageState();
 }
 
-class _FetchImageState extends State<FetchImage> {
+class _FetchImageState extends State<FetchImage>
+    with AutomaticKeepAliveClientMixin {
   final GenerateImage _generateImage = GenerateImage();
   Future<Uint8List>? finalData;
   @override
   void initState() {
-    finalData =
-        _generateImage.generateImage(widget.imageText, widget.imagePaths);
+    setState(() {
+      finalData =
+          _generateImage.generateImage(widget.imageText, widget.imagePaths);
+    });
     super.initState();
   }
 
+  @override
   Widget build(BuildContext context) {
+    super.build(context);
     return SizedBox(
       height: 50,
       width: 50,
@@ -33,12 +38,19 @@ class _FetchImageState extends State<FetchImage> {
           if (snapshot.connectionState == ConnectionState.waiting) {
             return const Center(child: CircularProgressIndicator());
           } else if (snapshot.hasError) {
-            return Text('Error: ${snapshot.error}');
+            return const Image(
+                image: AssetImage("assets/random_comic_panel.jpg"));
+
+            //Text('Error: ${snapshot.error}');
           } else if (snapshot.hasData) {
-            return Image.memory(
-              snapshot.data!,
-              width: 50,
-              height: 50,
+            return SizedBox(
+              height: 10,
+              width: 10,
+              child: Image.memory(
+                snapshot.data!,
+                width: 50,
+                height: 50,
+              ),
             );
           } else {
             return const Text('No data available');
@@ -47,4 +59,8 @@ class _FetchImageState extends State<FetchImage> {
       ),
     );
   }
+
+  @override
+  // TODO: implement wantKeepAlive
+  bool get wantKeepAlive => true;
 }
