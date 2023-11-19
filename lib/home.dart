@@ -45,6 +45,25 @@ class _HomeScreenState extends State<HomeScreen> {
   ];
   bool changeColor = true;
   @override
+  void initState() {
+    setState(() {
+      bubbleText = [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+      ];
+    });
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.black.withOpacity(0.75),
@@ -1400,7 +1419,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                                 "comic panel with${panelInputs[index]}",
                                             imagePaths: imagePaths,
                                           ),
-                                          if (bubbleText[index] != "")
+                                          if (bubbleText[index].toString() !=
+                                              "")
                                             Expanded(
                                               child: Container(
                                                   width: double.infinity,
@@ -1417,7 +1437,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                                         padding:
                                                             EdgeInsets.all(4.0),
                                                         child: Text(
-                                                          bubbleText[index],
+                                                          bubbleText[index]
+                                                              .toString(),
                                                           style: GoogleFonts
                                                               .bangers(),
                                                         ),
