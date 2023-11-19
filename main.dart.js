@@ -45014,8 +45014,7 @@ s.ag(new A.agw(s,this.b))
 A.y_(this.c,!1).e3()},
 $S:0}
 A.agw.prototype={
-$0(){var s=this.a
-s.CW[this.b]=s.ax.a.a},
+$0(){this.a.CW[this.b]="Random Text"},
 $S:0}
 A.Jj.prototype={
 L(a){var s=null,r=$.arF(),q=A.Aw(s,A.aCC(B.an,B.IR),B.n,!0)
