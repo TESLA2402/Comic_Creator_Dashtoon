@@ -1,7 +1,11 @@
+import 'dart:async';
+
 import 'package:comic_creator_dashtoon/constants/color.dart';
+import 'package:comic_creator_dashtoon/main.dart';
 import 'package:comic_creator_dashtoon/widgets/get_image.dart';
 import 'package:comic_creator_dashtoon/widgets/input_field.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 import 'package:share_plus/share_plus.dart';
 
@@ -24,8 +28,21 @@ class _HomeScreenState extends State<HomeScreen> {
   final TextEditingController _inputPanelEight = TextEditingController();
   final TextEditingController _inputPanelNine = TextEditingController();
   final TextEditingController _inputPanelTen = TextEditingController();
+  final TextEditingController _inputPanelText = TextEditingController();
   List<String> panelInputs = [];
   List<String> imagePaths = [];
+  List<String> bubbleText = [
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+  ];
   bool changeColor = true;
   @override
   Widget build(BuildContext context) {
@@ -138,120 +155,430 @@ class _HomeScreenState extends State<HomeScreen> {
                                 child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    const Text(
-                                      "Panel 1",
-                                      style: TextStyle(
-                                          color: Colors.white,
-                                          fontWeight: FontWeight.w200,
-                                          fontSize: 16),
+                                    Row(
+                                      children: [
+                                        const Text(
+                                          "Panel 1",
+                                          style: TextStyle(
+                                              color: Colors.white,
+                                              fontWeight: FontWeight.w200,
+                                              fontSize: 16),
+                                        ),
+                                        const SizedBox(
+                                          width: 16,
+                                        ),
+                                        GestureDetector(
+                                          onTap: () {
+                                            _showDialog(0);
+                                          },
+                                          child: Container(
+                                            padding: const EdgeInsets.only(
+                                                left: 4,
+                                                right: 4,
+                                                top: 4,
+                                                bottom: 4),
+                                            decoration: BoxDecoration(
+                                                color: Colors.lightBlue
+                                                    .withOpacity(0.2),
+                                                borderRadius:
+                                                    BorderRadius.circular(10)),
+                                            child: const Text(
+                                              "Add Text",
+                                              style: TextStyle(
+                                                  color: Colors.blue,
+                                                  fontWeight: FontWeight.w800,
+                                                  fontSize: 12),
+                                            ),
+                                          ),
+                                        ),
+                                      ],
                                     ),
                                     InputField(
                                         editingController: _inputPanelOne),
                                     const SizedBox(
                                       height: 16,
                                     ),
-                                    const Text(
-                                      "Panel 2",
-                                      style: TextStyle(
-                                          color: Colors.white,
-                                          fontWeight: FontWeight.w200,
-                                          fontSize: 16),
+                                    Row(
+                                      children: [
+                                        const Text(
+                                          "Panel 2",
+                                          style: TextStyle(
+                                              color: Colors.white,
+                                              fontWeight: FontWeight.w200,
+                                              fontSize: 16),
+                                        ),
+                                        const SizedBox(
+                                          width: 16,
+                                        ),
+                                        GestureDetector(
+                                          onTap: () {
+                                            _showDialog(1);
+                                          },
+                                          child: Container(
+                                            padding: const EdgeInsets.only(
+                                                left: 4,
+                                                right: 4,
+                                                top: 4,
+                                                bottom: 4),
+                                            decoration: BoxDecoration(
+                                                color: Colors.lightBlue
+                                                    .withOpacity(0.2),
+                                                borderRadius:
+                                                    BorderRadius.circular(10)),
+                                            child: const Text(
+                                              "Add Text",
+                                              style: TextStyle(
+                                                  color: Colors.blue,
+                                                  fontWeight: FontWeight.w800,
+                                                  fontSize: 12),
+                                            ),
+                                          ),
+                                        ),
+                                      ],
                                     ),
                                     InputField(
                                         editingController: _inputPanelTwo),
                                     const SizedBox(
                                       height: 16,
                                     ),
-                                    const Text(
-                                      "Panel 3",
-                                      style: TextStyle(
-                                          color: Colors.white,
-                                          fontWeight: FontWeight.w200,
-                                          fontSize: 16),
+                                    Row(
+                                      children: [
+                                        const Text(
+                                          "Panel 3",
+                                          style: TextStyle(
+                                              color: Colors.white,
+                                              fontWeight: FontWeight.w200,
+                                              fontSize: 16),
+                                        ),
+                                        const SizedBox(
+                                          width: 16,
+                                        ),
+                                        GestureDetector(
+                                          onTap: () {
+                                            _showDialog(2);
+                                          },
+                                          child: Container(
+                                            padding: const EdgeInsets.only(
+                                                left: 4,
+                                                right: 4,
+                                                top: 4,
+                                                bottom: 4),
+                                            decoration: BoxDecoration(
+                                                color: Colors.lightBlue
+                                                    .withOpacity(0.2),
+                                                borderRadius:
+                                                    BorderRadius.circular(10)),
+                                            child: const Text(
+                                              "Add Text",
+                                              style: TextStyle(
+                                                  color: Colors.blue,
+                                                  fontWeight: FontWeight.w800,
+                                                  fontSize: 12),
+                                            ),
+                                          ),
+                                        ),
+                                      ],
                                     ),
                                     InputField(
                                         editingController: _inputPanelThree),
                                     const SizedBox(
                                       height: 16,
                                     ),
-                                    const Text(
-                                      "Panel 4",
-                                      style: TextStyle(
-                                          color: Colors.white,
-                                          fontWeight: FontWeight.w200,
-                                          fontSize: 16),
+                                    Row(
+                                      children: [
+                                        const Text(
+                                          "Panel 4",
+                                          style: TextStyle(
+                                              color: Colors.white,
+                                              fontWeight: FontWeight.w200,
+                                              fontSize: 16),
+                                        ),
+                                        const SizedBox(
+                                          width: 16,
+                                        ),
+                                        GestureDetector(
+                                          onTap: () {
+                                            _showDialog(3);
+                                          },
+                                          child: Container(
+                                            padding: const EdgeInsets.only(
+                                                left: 4,
+                                                right: 4,
+                                                top: 4,
+                                                bottom: 4),
+                                            decoration: BoxDecoration(
+                                                color: Colors.lightBlue
+                                                    .withOpacity(0.2),
+                                                borderRadius:
+                                                    BorderRadius.circular(10)),
+                                            child: const Text(
+                                              "Add Text",
+                                              style: TextStyle(
+                                                  color: Colors.blue,
+                                                  fontWeight: FontWeight.w800,
+                                                  fontSize: 12),
+                                            ),
+                                          ),
+                                        ),
+                                      ],
                                     ),
                                     InputField(
                                         editingController: _inputPanelFour),
                                     const SizedBox(
                                       height: 16,
                                     ),
-                                    const Text(
-                                      "Panel 5",
-                                      style: TextStyle(
-                                          color: Colors.white,
-                                          fontWeight: FontWeight.w200,
-                                          fontSize: 16),
+                                    Row(
+                                      children: [
+                                        const Text(
+                                          "Panel 5",
+                                          style: TextStyle(
+                                              color: Colors.white,
+                                              fontWeight: FontWeight.w200,
+                                              fontSize: 16),
+                                        ),
+                                        const SizedBox(
+                                          width: 16,
+                                        ),
+                                        GestureDetector(
+                                          onTap: () {
+                                            _showDialog(4);
+                                          },
+                                          child: Container(
+                                            padding: const EdgeInsets.only(
+                                                left: 4,
+                                                right: 4,
+                                                top: 4,
+                                                bottom: 4),
+                                            decoration: BoxDecoration(
+                                                color: Colors.lightBlue
+                                                    .withOpacity(0.2),
+                                                borderRadius:
+                                                    BorderRadius.circular(10)),
+                                            child: const Text(
+                                              "Add Text",
+                                              style: TextStyle(
+                                                  color: Colors.blue,
+                                                  fontWeight: FontWeight.w800,
+                                                  fontSize: 12),
+                                            ),
+                                          ),
+                                        ),
+                                      ],
                                     ),
                                     InputField(
                                         editingController: _inputPanelFive),
                                     const SizedBox(
                                       height: 16,
                                     ),
-                                    const Text(
-                                      "Panel 6",
-                                      style: TextStyle(
-                                          color: Colors.white,
-                                          fontWeight: FontWeight.w200,
-                                          fontSize: 16),
+                                    Row(
+                                      children: [
+                                        const Text(
+                                          "Panel 6",
+                                          style: TextStyle(
+                                              color: Colors.white,
+                                              fontWeight: FontWeight.w200,
+                                              fontSize: 16),
+                                        ),
+                                        const SizedBox(
+                                          width: 16,
+                                        ),
+                                        GestureDetector(
+                                          onTap: () {
+                                            _showDialog(5);
+                                          },
+                                          child: Container(
+                                            padding: const EdgeInsets.only(
+                                                left: 4,
+                                                right: 4,
+                                                top: 4,
+                                                bottom: 4),
+                                            decoration: BoxDecoration(
+                                                color: Colors.lightBlue
+                                                    .withOpacity(0.2),
+                                                borderRadius:
+                                                    BorderRadius.circular(10)),
+                                            child: const Text(
+                                              "Add Text",
+                                              style: TextStyle(
+                                                  color: Colors.blue,
+                                                  fontWeight: FontWeight.w800,
+                                                  fontSize: 12),
+                                            ),
+                                          ),
+                                        ),
+                                      ],
                                     ),
                                     InputField(
                                         editingController: _inputPanelSix),
                                     const SizedBox(
                                       height: 16,
                                     ),
-                                    const Text(
-                                      "Panel 7",
-                                      style: TextStyle(
-                                          color: Colors.white,
-                                          fontWeight: FontWeight.w200,
-                                          fontSize: 16),
+                                    Row(
+                                      children: [
+                                        const Text(
+                                          "Panel 7",
+                                          style: TextStyle(
+                                              color: Colors.white,
+                                              fontWeight: FontWeight.w200,
+                                              fontSize: 16),
+                                        ),
+                                        const SizedBox(
+                                          width: 16,
+                                        ),
+                                        GestureDetector(
+                                          onTap: () {
+                                            _showDialog(6);
+                                          },
+                                          child: Container(
+                                            padding: const EdgeInsets.only(
+                                                left: 4,
+                                                right: 4,
+                                                top: 4,
+                                                bottom: 4),
+                                            decoration: BoxDecoration(
+                                                color: Colors.lightBlue
+                                                    .withOpacity(0.2),
+                                                borderRadius:
+                                                    BorderRadius.circular(10)),
+                                            child: const Text(
+                                              "Add Text",
+                                              style: TextStyle(
+                                                  color: Colors.blue,
+                                                  fontWeight: FontWeight.w800,
+                                                  fontSize: 12),
+                                            ),
+                                          ),
+                                        ),
+                                      ],
                                     ),
                                     InputField(
                                         editingController: _inputPanelSeven),
                                     const SizedBox(
                                       height: 16,
                                     ),
-                                    const Text(
-                                      "Panel 8",
-                                      style: TextStyle(
-                                          color: Colors.white,
-                                          fontWeight: FontWeight.w200,
-                                          fontSize: 16),
+                                    Row(
+                                      children: [
+                                        const Text(
+                                          "Panel 8",
+                                          style: TextStyle(
+                                              color: Colors.white,
+                                              fontWeight: FontWeight.w200,
+                                              fontSize: 16),
+                                        ),
+                                        const SizedBox(
+                                          width: 16,
+                                        ),
+                                        GestureDetector(
+                                          onTap: () {
+                                            _showDialog(7);
+                                          },
+                                          child: Container(
+                                            padding: const EdgeInsets.only(
+                                                left: 4,
+                                                right: 4,
+                                                top: 4,
+                                                bottom: 4),
+                                            decoration: BoxDecoration(
+                                                color: Colors.lightBlue
+                                                    .withOpacity(0.2),
+                                                borderRadius:
+                                                    BorderRadius.circular(10)),
+                                            child: const Text(
+                                              "Add Text",
+                                              style: TextStyle(
+                                                  color: Colors.blue,
+                                                  fontWeight: FontWeight.w800,
+                                                  fontSize: 12),
+                                            ),
+                                          ),
+                                        ),
+                                      ],
                                     ),
                                     InputField(
                                         editingController: _inputPanelEight),
                                     const SizedBox(
                                       height: 16,
                                     ),
-                                    const Text(
-                                      "Panel 9",
-                                      style: TextStyle(
-                                          color: Colors.white,
-                                          fontWeight: FontWeight.w200,
-                                          fontSize: 16),
+                                    Row(
+                                      children: [
+                                        const Text(
+                                          "Panel 9",
+                                          style: TextStyle(
+                                              color: Colors.white,
+                                              fontWeight: FontWeight.w200,
+                                              fontSize: 16),
+                                        ),
+                                        const SizedBox(
+                                          width: 16,
+                                        ),
+                                        GestureDetector(
+                                          onTap: () {
+                                            _showDialog(8);
+                                          },
+                                          child: Container(
+                                            padding: const EdgeInsets.only(
+                                                left: 4,
+                                                right: 4,
+                                                top: 4,
+                                                bottom: 4),
+                                            decoration: BoxDecoration(
+                                                color: Colors.lightBlue
+                                                    .withOpacity(0.2),
+                                                borderRadius:
+                                                    BorderRadius.circular(10)),
+                                            child: const Text(
+                                              "Add Text",
+                                              style: TextStyle(
+                                                  color: Colors.blue,
+                                                  fontWeight: FontWeight.w800,
+                                                  fontSize: 12),
+                                            ),
+                                          ),
+                                        ),
+                                      ],
                                     ),
                                     InputField(
                                         editingController: _inputPanelNine),
                                     const SizedBox(
                                       height: 16,
                                     ),
-                                    const Text(
-                                      "Panel 10",
-                                      style: TextStyle(
-                                          color: Colors.white,
-                                          fontWeight: FontWeight.w200,
-                                          fontSize: 16),
+                                    Row(
+                                      children: [
+                                        const Text(
+                                          "Panel 10",
+                                          style: TextStyle(
+                                              color: Colors.white,
+                                              fontWeight: FontWeight.w200,
+                                              fontSize: 16),
+                                        ),
+                                        const SizedBox(
+                                          width: 16,
+                                        ),
+                                        GestureDetector(
+                                          onTap: () {
+                                            _showDialog(9);
+                                          },
+                                          child: Container(
+                                            padding: const EdgeInsets.only(
+                                                left: 4,
+                                                right: 4,
+                                                top: 4,
+                                                bottom: 4),
+                                            decoration: BoxDecoration(
+                                                color: Colors.lightBlue
+                                                    .withOpacity(0.2),
+                                                borderRadius:
+                                                    BorderRadius.circular(10)),
+                                            child: const Text(
+                                              "Add Text",
+                                              style: TextStyle(
+                                                  color: Colors.blue,
+                                                  fontWeight: FontWeight.w800,
+                                                  fontSize: 12),
+                                            ),
+                                          ),
+                                        ),
+                                      ],
                                     ),
                                     InputField(
                                         editingController: _inputPanelTen),
@@ -341,15 +668,40 @@ class _HomeScreenState extends State<HomeScreen> {
                                               : 2,
                                 ),
                                 itemBuilder: (context, index) {
-                                  return SizedBox(
-                                    height: 50,
-                                    width: 50,
-                                    child: FetchImage(
-                                      imageText:
-                                          "comic panel with${panelInputs[index]}",
-                                      imagePaths: imagePaths,
-                                    ),
-                                  );
+                                  return Stack(
+                                      alignment: Alignment.bottomCenter,
+                                      children: [
+                                        FetchImage(
+                                          imageText:
+                                              "comic panel with${panelInputs[index]}",
+                                          imagePaths: imagePaths,
+                                        ),
+                                        if (bubbleText[index] != "")
+                                          Expanded(
+                                            child: Container(
+                                                width: double.infinity,
+                                                color: Colors.white,
+                                                padding: EdgeInsets.all(4),
+                                                child: Expanded(
+                                                  child: Container(
+                                                    decoration: BoxDecoration(
+                                                        border: Border.all(
+                                                            color:
+                                                                Colors.black),
+                                                        color: Colors.white),
+                                                    child: Padding(
+                                                      padding:
+                                                          EdgeInsets.all(4.0),
+                                                      child: Text(
+                                                        bubbleText[index],
+                                                        style: GoogleFonts
+                                                            .bangers(),
+                                                      ),
+                                                    ),
+                                                  ),
+                                                )),
+                                          ),
+                                      ]);
                                 },
                               ),
                             )
@@ -482,120 +834,440 @@ class _HomeScreenState extends State<HomeScreen> {
                                     crossAxisAlignment:
                                         CrossAxisAlignment.start,
                                     children: [
-                                      const Text(
-                                        "Panel 1",
-                                        style: TextStyle(
-                                            color: Colors.white,
-                                            fontWeight: FontWeight.w200,
-                                            fontSize: 16),
+                                      Row(
+                                        children: [
+                                          const Text(
+                                            "Panel 1",
+                                            style: TextStyle(
+                                                color: Colors.white,
+                                                fontWeight: FontWeight.w200,
+                                                fontSize: 16),
+                                          ),
+                                          const SizedBox(
+                                            width: 16,
+                                          ),
+                                          GestureDetector(
+                                            onTap: () {
+                                              _showDialog(0);
+                                            },
+                                            child: Container(
+                                              padding: const EdgeInsets.only(
+                                                  left: 4,
+                                                  right: 4,
+                                                  top: 4,
+                                                  bottom: 4),
+                                              decoration: BoxDecoration(
+                                                  color: Colors.lightBlue
+                                                      .withOpacity(0.2),
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                          10)),
+                                              child: const Text(
+                                                "Add Text",
+                                                style: TextStyle(
+                                                    color: Colors.blue,
+                                                    fontWeight: FontWeight.w800,
+                                                    fontSize: 12),
+                                              ),
+                                            ),
+                                          ),
+                                        ],
                                       ),
                                       InputField(
                                           editingController: _inputPanelOne),
                                       const SizedBox(
                                         height: 16,
                                       ),
-                                      const Text(
-                                        "Panel 2",
-                                        style: TextStyle(
-                                            color: Colors.white,
-                                            fontWeight: FontWeight.w200,
-                                            fontSize: 16),
+                                      Row(
+                                        children: [
+                                          const Text(
+                                            "Panel 2",
+                                            style: TextStyle(
+                                                color: Colors.white,
+                                                fontWeight: FontWeight.w200,
+                                                fontSize: 16),
+                                          ),
+                                          const SizedBox(
+                                            width: 16,
+                                          ),
+                                          GestureDetector(
+                                            onTap: () {
+                                              _showDialog(1);
+                                            },
+                                            child: Container(
+                                              padding: const EdgeInsets.only(
+                                                  left: 4,
+                                                  right: 4,
+                                                  top: 4,
+                                                  bottom: 4),
+                                              decoration: BoxDecoration(
+                                                  color: Colors.lightBlue
+                                                      .withOpacity(0.2),
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                          10)),
+                                              child: const Text(
+                                                "Add Text",
+                                                style: TextStyle(
+                                                    color: Colors.blue,
+                                                    fontWeight: FontWeight.w800,
+                                                    fontSize: 12),
+                                              ),
+                                            ),
+                                          ),
+                                        ],
                                       ),
                                       InputField(
                                           editingController: _inputPanelTwo),
                                       const SizedBox(
                                         height: 16,
                                       ),
-                                      const Text(
-                                        "Panel 3",
-                                        style: TextStyle(
-                                            color: Colors.white,
-                                            fontWeight: FontWeight.w200,
-                                            fontSize: 16),
+                                      Row(
+                                        children: [
+                                          const Text(
+                                            "Panel 3",
+                                            style: TextStyle(
+                                                color: Colors.white,
+                                                fontWeight: FontWeight.w200,
+                                                fontSize: 16),
+                                          ),
+                                          const SizedBox(
+                                            width: 16,
+                                          ),
+                                          GestureDetector(
+                                            onTap: () {
+                                              _showDialog(2);
+                                            },
+                                            child: Container(
+                                              padding: const EdgeInsets.only(
+                                                  left: 4,
+                                                  right: 4,
+                                                  top: 4,
+                                                  bottom: 4),
+                                              decoration: BoxDecoration(
+                                                  color: Colors.lightBlue
+                                                      .withOpacity(0.2),
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                          10)),
+                                              child: const Text(
+                                                "Add Text",
+                                                style: TextStyle(
+                                                    color: Colors.blue,
+                                                    fontWeight: FontWeight.w800,
+                                                    fontSize: 12),
+                                              ),
+                                            ),
+                                          ),
+                                        ],
                                       ),
                                       InputField(
                                           editingController: _inputPanelThree),
                                       const SizedBox(
                                         height: 16,
                                       ),
-                                      const Text(
-                                        "Panel 4",
-                                        style: TextStyle(
-                                            color: Colors.white,
-                                            fontWeight: FontWeight.w200,
-                                            fontSize: 16),
+                                      Row(
+                                        children: [
+                                          const Text(
+                                            "Panel 4",
+                                            style: TextStyle(
+                                                color: Colors.white,
+                                                fontWeight: FontWeight.w200,
+                                                fontSize: 16),
+                                          ),
+                                          const SizedBox(
+                                            width: 16,
+                                          ),
+                                          GestureDetector(
+                                            onTap: () {
+                                              _showDialog(3);
+                                            },
+                                            child: Container(
+                                              padding: const EdgeInsets.only(
+                                                  left: 4,
+                                                  right: 4,
+                                                  top: 4,
+                                                  bottom: 4),
+                                              decoration: BoxDecoration(
+                                                  color: Colors.lightBlue
+                                                      .withOpacity(0.2),
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                          10)),
+                                              child: const Text(
+                                                "Add Text",
+                                                style: TextStyle(
+                                                    color: Colors.blue,
+                                                    fontWeight: FontWeight.w800,
+                                                    fontSize: 12),
+                                              ),
+                                            ),
+                                          ),
+                                        ],
                                       ),
                                       InputField(
                                           editingController: _inputPanelFour),
                                       const SizedBox(
                                         height: 16,
                                       ),
-                                      const Text(
-                                        "Panel 5",
-                                        style: TextStyle(
-                                            color: Colors.white,
-                                            fontWeight: FontWeight.w200,
-                                            fontSize: 16),
+                                      Row(
+                                        children: [
+                                          const Text(
+                                            "Panel 5",
+                                            style: TextStyle(
+                                                color: Colors.white,
+                                                fontWeight: FontWeight.w200,
+                                                fontSize: 16),
+                                          ),
+                                          const SizedBox(
+                                            width: 16,
+                                          ),
+                                          GestureDetector(
+                                            onTap: () {
+                                              _showDialog(4);
+                                            },
+                                            child: Container(
+                                              padding: const EdgeInsets.only(
+                                                  left: 4,
+                                                  right: 4,
+                                                  top: 4,
+                                                  bottom: 4),
+                                              decoration: BoxDecoration(
+                                                  color: Colors.lightBlue
+                                                      .withOpacity(0.2),
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                          10)),
+                                              child: const Text(
+                                                "Add Text",
+                                                style: TextStyle(
+                                                    color: Colors.blue,
+                                                    fontWeight: FontWeight.w800,
+                                                    fontSize: 12),
+                                              ),
+                                            ),
+                                          ),
+                                        ],
                                       ),
                                       InputField(
                                           editingController: _inputPanelFive),
                                       const SizedBox(
                                         height: 16,
                                       ),
-                                      const Text(
-                                        "Panel 6",
-                                        style: TextStyle(
-                                            color: Colors.white,
-                                            fontWeight: FontWeight.w200,
-                                            fontSize: 16),
+                                      Row(
+                                        children: [
+                                          const Text(
+                                            "Panel 6",
+                                            style: TextStyle(
+                                                color: Colors.white,
+                                                fontWeight: FontWeight.w200,
+                                                fontSize: 16),
+                                          ),
+                                          const SizedBox(
+                                            width: 16,
+                                          ),
+                                          GestureDetector(
+                                            onTap: () {
+                                              _showDialog(5);
+                                            },
+                                            child: Container(
+                                              padding: const EdgeInsets.only(
+                                                  left: 4,
+                                                  right: 4,
+                                                  top: 4,
+                                                  bottom: 4),
+                                              decoration: BoxDecoration(
+                                                  color: Colors.lightBlue
+                                                      .withOpacity(0.2),
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                          10)),
+                                              child: const Text(
+                                                "Add Text",
+                                                style: TextStyle(
+                                                    color: Colors.blue,
+                                                    fontWeight: FontWeight.w800,
+                                                    fontSize: 12),
+                                              ),
+                                            ),
+                                          ),
+                                        ],
                                       ),
                                       InputField(
                                           editingController: _inputPanelSix),
                                       const SizedBox(
                                         height: 16,
                                       ),
-                                      const Text(
-                                        "Panel 7",
-                                        style: TextStyle(
-                                            color: Colors.white,
-                                            fontWeight: FontWeight.w200,
-                                            fontSize: 16),
+                                      Row(
+                                        children: [
+                                          const Text(
+                                            "Panel 7",
+                                            style: TextStyle(
+                                                color: Colors.white,
+                                                fontWeight: FontWeight.w200,
+                                                fontSize: 16),
+                                          ),
+                                          const SizedBox(
+                                            width: 16,
+                                          ),
+                                          GestureDetector(
+                                            onTap: () {
+                                              _showDialog(6);
+                                            },
+                                            child: Container(
+                                              padding: const EdgeInsets.only(
+                                                  left: 4,
+                                                  right: 4,
+                                                  top: 4,
+                                                  bottom: 4),
+                                              decoration: BoxDecoration(
+                                                  color: Colors.lightBlue
+                                                      .withOpacity(0.2),
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                          10)),
+                                              child: const Text(
+                                                "Add Text",
+                                                style: TextStyle(
+                                                    color: Colors.blue,
+                                                    fontWeight: FontWeight.w800,
+                                                    fontSize: 12),
+                                              ),
+                                            ),
+                                          ),
+                                        ],
                                       ),
                                       InputField(
                                           editingController: _inputPanelSeven),
                                       const SizedBox(
                                         height: 16,
                                       ),
-                                      const Text(
-                                        "Panel 8",
-                                        style: TextStyle(
-                                            color: Colors.white,
-                                            fontWeight: FontWeight.w200,
-                                            fontSize: 16),
+                                      Row(
+                                        children: [
+                                          const Text(
+                                            "Panel 8",
+                                            style: TextStyle(
+                                                color: Colors.white,
+                                                fontWeight: FontWeight.w200,
+                                                fontSize: 16),
+                                          ),
+                                          const SizedBox(
+                                            width: 16,
+                                          ),
+                                          GestureDetector(
+                                            onTap: () {
+                                              _showDialog(7);
+                                            },
+                                            child: Container(
+                                              padding: const EdgeInsets.only(
+                                                  left: 4,
+                                                  right: 4,
+                                                  top: 4,
+                                                  bottom: 4),
+                                              decoration: BoxDecoration(
+                                                  color: Colors.lightBlue
+                                                      .withOpacity(0.2),
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                          10)),
+                                              child: const Text(
+                                                "Add Text",
+                                                style: TextStyle(
+                                                    color: Colors.blue,
+                                                    fontWeight: FontWeight.w800,
+                                                    fontSize: 12),
+                                              ),
+                                            ),
+                                          ),
+                                        ],
                                       ),
                                       InputField(
                                           editingController: _inputPanelEight),
                                       const SizedBox(
                                         height: 16,
                                       ),
-                                      const Text(
-                                        "Panel 9",
-                                        style: TextStyle(
-                                            color: Colors.white,
-                                            fontWeight: FontWeight.w200,
-                                            fontSize: 16),
+                                      Row(
+                                        children: [
+                                          const Text(
+                                            "Panel 9",
+                                            style: TextStyle(
+                                                color: Colors.white,
+                                                fontWeight: FontWeight.w200,
+                                                fontSize: 16),
+                                          ),
+                                          const SizedBox(
+                                            width: 16,
+                                          ),
+                                          GestureDetector(
+                                            onTap: () {
+                                              _showDialog(8);
+                                            },
+                                            child: Container(
+                                              padding: const EdgeInsets.only(
+                                                  left: 4,
+                                                  right: 4,
+                                                  top: 4,
+                                                  bottom: 4),
+                                              decoration: BoxDecoration(
+                                                  color: Colors.lightBlue
+                                                      .withOpacity(0.2),
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                          10)),
+                                              child: const Text(
+                                                "Add Text",
+                                                style: TextStyle(
+                                                    color: Colors.blue,
+                                                    fontWeight: FontWeight.w800,
+                                                    fontSize: 12),
+                                              ),
+                                            ),
+                                          ),
+                                        ],
                                       ),
                                       InputField(
                                           editingController: _inputPanelNine),
                                       const SizedBox(
                                         height: 16,
                                       ),
-                                      const Text(
-                                        "Panel 10",
-                                        style: TextStyle(
-                                            color: Colors.white,
-                                            fontWeight: FontWeight.w200,
-                                            fontSize: 16),
+                                      Row(
+                                        children: [
+                                          const Text(
+                                            "Panel 10",
+                                            style: TextStyle(
+                                                color: Colors.white,
+                                                fontWeight: FontWeight.w200,
+                                                fontSize: 16),
+                                          ),
+                                          const SizedBox(
+                                            width: 16,
+                                          ),
+                                          GestureDetector(
+                                            onTap: () {
+                                              _showDialog(9);
+                                            },
+                                            child: Container(
+                                              padding: const EdgeInsets.only(
+                                                  left: 4,
+                                                  right: 4,
+                                                  top: 4,
+                                                  bottom: 4),
+                                              decoration: BoxDecoration(
+                                                  color: Colors.lightBlue
+                                                      .withOpacity(0.2),
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                          10)),
+                                              child: const Text(
+                                                "Add Text",
+                                                style: TextStyle(
+                                                    color: Colors.blue,
+                                                    fontWeight: FontWeight.w800,
+                                                    fontSize: 12),
+                                              ),
+                                            ),
+                                          ),
+                                        ],
                                       ),
                                       InputField(
                                           editingController: _inputPanelTen),
@@ -695,6 +1367,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 ),
                               ],
                             ),
+
                             const SizedBox(
                               height: 16,
                             ),
@@ -719,11 +1392,40 @@ class _HomeScreenState extends State<HomeScreen> {
                                                 : 2,
                                   ),
                                   itemBuilder: (context, index) {
-                                    return FetchImage(
-                                      imageText:
-                                          "comic panel with${panelInputs[index]}",
-                                      imagePaths: imagePaths,
-                                    );
+                                    return Stack(
+                                        alignment: Alignment.bottomCenter,
+                                        children: [
+                                          FetchImage(
+                                            imageText:
+                                                "comic panel with${panelInputs[index]}",
+                                            imagePaths: imagePaths,
+                                          ),
+                                          if (bubbleText[index] != "")
+                                            Expanded(
+                                              child: Container(
+                                                  width: double.infinity,
+                                                  color: Colors.white,
+                                                  padding: EdgeInsets.all(4),
+                                                  child: Expanded(
+                                                    child: Container(
+                                                      decoration: BoxDecoration(
+                                                          border: Border.all(
+                                                              color:
+                                                                  Colors.black),
+                                                          color: Colors.white),
+                                                      child: Padding(
+                                                        padding:
+                                                            EdgeInsets.all(4.0),
+                                                        child: Text(
+                                                          bubbleText[index],
+                                                          style: GoogleFonts
+                                                              .bangers(),
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  )),
+                                            ),
+                                        ]);
                                   },
                                 ),
                               )
@@ -735,6 +1437,44 @@ class _HomeScreenState extends State<HomeScreen> {
                 ],
               ),
             ),
+    );
+  }
+
+  void _showDialog(int index) {
+    showDialog(
+      context: navigatorKey.currentContext!,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          backgroundColor: Colors.transparent,
+          title: Text(
+            'Add text',
+            style: GoogleFonts.bangers(color: Colors.white),
+          ),
+          content: InputField(editingController: _inputPanelText),
+          actions: [
+            GestureDetector(
+              onTap: () {
+                bubbleText[index] = _inputPanelText.text;
+                Navigator.of(context).pop();
+              },
+              child: Container(
+                padding:
+                    const EdgeInsets.only(left: 4, right: 8, top: 8, bottom: 4),
+                decoration: BoxDecoration(
+                    color: Colors.lightBlue.withOpacity(0.2),
+                    borderRadius: BorderRadius.circular(10)),
+                child: const Text(
+                  "Ok",
+                  style: TextStyle(
+                      color: Colors.blue,
+                      fontWeight: FontWeight.w800,
+                      fontSize: 12),
+                ),
+              ),
+            ),
+          ],
+        );
+      },
     );
   }
 }

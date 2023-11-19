@@ -27,7 +27,6 @@ class GenerateImage {
       body: jsonEncode(data),
     );
     await Future.delayed(const Duration(seconds: 30), () {});
-
     if (response.statusCode == 200) {
       return response.bodyBytes;
     } else {

@@ -28,35 +28,25 @@ class _FetchImageState extends State<FetchImage>
   @override
   Widget build(BuildContext context) {
     super.build(context);
-    return SizedBox(
-      height: 50,
-      width: 50,
-      child: FutureBuilder(
-        future: //finalData,
-            _generateImage.generateImage(widget.imageText, widget.imagePaths),
-        builder: (context, snapshot) {
-          if (snapshot.connectionState == ConnectionState.waiting) {
-            return const Center(child: CircularProgressIndicator());
-          } else if (snapshot.hasError) {
-            return const Image(
-                image: AssetImage("assets/random_comic_panel.jpg"));
+    return FutureBuilder(
+      future: //finalData,
+          _generateImage.generateImage(widget.imageText, widget.imagePaths),
+      builder: (context, snapshot) {
+        if (snapshot.connectionState == ConnectionState.waiting) {
+          return const Center(child: CircularProgressIndicator());
+        } else if (snapshot.hasError) {
+          return const Image(
+              image: AssetImage("assets/random_comic_panel.jpg"));
 
-            //Text('Error: ${snapshot.error}');
-          } else if (snapshot.hasData) {
-            return SizedBox(
-              height: 10,
-              width: 10,
-              child: Image.memory(
-                snapshot.data!,
-                width: 50,
-                height: 50,
-              ),
-            );
-          } else {
-            return const Text('No data available');
-          }
-        },
-      ),
+          //Text('Error: ${snapshot.error}');
+        } else if (snapshot.hasData) {
+          return Image.memory(
+            snapshot.data!,
+          );
+        } else {
+          return const Text('No data available');
+        }
+      },
     );
   }
 

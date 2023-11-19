@@ -40,6 +40,7 @@ dependencies:
   responsive_framework: ^1.1.1
   font_awesome_flutter: ^10.6.0
   share_plus: ^7.2.1
+  google_fonts: ^6.1.0
 
 dev_dependencies:
   flutter_test:
