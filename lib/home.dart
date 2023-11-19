@@ -1417,29 +1417,29 @@ class _HomeScreenState extends State<HomeScreen> {
                                           ),
                                           // if (bubbleText[index].toString() !=
                                           //     "")
-                                          // Container(
-                                          //     width: double.infinity,
-                                          //     color: Colors.white,
-                                          //     padding: EdgeInsets.all(4),
-                                          //     child: Expanded(
-                                          //       child: Container(
-                                          //         decoration: BoxDecoration(
-                                          //             border: Border.all(
-                                          //                 color: Colors.black),
-                                          //             color: Colors.white),
-                                          //         child: Padding(
-                                          //           padding:
-                                          //               EdgeInsets.all(4.0),
-                                          //           child: Text(
-                                          //             // bubbleText[index]
-                                          //             //     .toString(),
-                                          //             "yes",
-                                          //             style:
-                                          //                 GoogleFonts.bangers(),
-                                          //           ),
-                                          //         ),
-                                          //       ),
-                                          //     )),
+                                          Container(
+                                              width: double.infinity,
+                                              color: Colors.white,
+                                              padding: EdgeInsets.all(4),
+                                              child: Expanded(
+                                                child: Container(
+                                                  decoration: BoxDecoration(
+                                                      border: Border.all(
+                                                          color: Colors.black),
+                                                      color: Colors.white),
+                                                  child: Padding(
+                                                    padding:
+                                                        EdgeInsets.all(4.0),
+                                                    child: Text(
+                                                      // bubbleText[index]
+                                                      //     .toString(),
+                                                      "yes",
+                                                      // style:
+                                                      //     GoogleFonts.bangers(),
+                                                    ),
+                                                  ),
+                                                ),
+                                              )),
                                         ]);
                                   },
                                 ),
