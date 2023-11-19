@@ -1,5 +1,3 @@
-import 'dart:async';
-
 import 'package:comic_creator_dashtoon/constants/color.dart';
 import 'package:comic_creator_dashtoon/main.dart';
 import 'package:comic_creator_dashtoon/widgets/get_image.dart';
@@ -1472,7 +1470,7 @@ class _HomeScreenState extends State<HomeScreen> {
             GestureDetector(
               onTap: () {
                 setState(() {
-                  bubbleText[index] = _inputPanelText.text.toString();
+                  bubbleText[index] = "Random Text";
                 });
                 Navigator.of(context).pop();
               },
