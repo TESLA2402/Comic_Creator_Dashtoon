@@ -1415,13 +1415,15 @@ class _HomeScreenState extends State<HomeScreen> {
                                                 "comic panel with${panelInputs[index]}",
                                             imagePaths: imagePaths,
                                           ),
-                                          Text(
-                                            "yes",
-                                            style: GoogleFonts.bangers(
-                                                color: Colors.white),
-                                          )
-                                          // if (bubbleText[index].toString() !=
-                                          //     "")
+                                          if (bubbleText[index].toString() !=
+                                              "")
+                                            Text(
+                                              bubbleText[index],
+                                              style: GoogleFonts.bangers(
+                                                  color: Colors.white,
+                                                  decorationColor:
+                                                      Colors.yellow),
+                                            )
                                           // Container(
                                           //     width: double.infinity,
                                           //     color: Colors.white,
