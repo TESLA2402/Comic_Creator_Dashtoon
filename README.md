@@ -2,7 +2,7 @@
 
 ## How to run
 - Website url : https://tesla2402.github.io/Comic_Creator_Dashtoon/
-- Android users can also install .apk files from the release section to run on their Android devices for better experience.
+- Android users can also [install .apk files](https://github.com/TESLA2402/Comic_Creator_Dashtoon/releases/download/v1.0.31/app-debug.apk) from the release section to run on their Android devices for better experience.
 - Alternatively, you can build your own release by cloning the github repo, and running 
   ```
   flutter build web --release
