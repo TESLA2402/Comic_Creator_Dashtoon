@@ -17,6 +17,7 @@
   - Display area for generated comic panels
   - Share generated comic strip (currently only available on windows)
   - Ability to add speech bubbles or text annotations on the images.
+  - Responsive
 </ul>
 
 ## API
@@ -45,8 +46,9 @@
 
 ```
 Submitted by:
-Lakshay
-200104049
-IIT Guwahati
+Name: Lakshay
+Roll No.: 200104049
+College: IIT Guwahati
+Email: l.lakshay@iitg.ac.in
 ```
 
